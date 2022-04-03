@@ -1,6 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ShapeCalculator;
-using System;
 using ShapeCalc = ShapeCalculator.ShapeCalculator;
 
 namespace ShapeCalculatorTest

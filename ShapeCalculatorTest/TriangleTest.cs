@@ -5,7 +5,7 @@ using ShapeCalculator;
 namespace ShapeCalculatorTest
 {
     [TestClass]
-    class TriangleTest
+    public class TriangleTest
     {
         [TestMethod]
         public void WrongSides()
@@ -16,7 +16,7 @@ namespace ShapeCalculatorTest
             Assert.ThrowsException<ArgumentException>(() => { var a = new Triangle(1,3,-5); });
 
             //Impossible triangle
-            Assert.ThrowsException<ArgumentException>(() => { var a = new Triangle(2, 3, 0.5); });
+            Assert.ThrowsException<ArgumentException>(() => { var a = new Triangle(1, 3, 0.5); });
         }
     }
 }

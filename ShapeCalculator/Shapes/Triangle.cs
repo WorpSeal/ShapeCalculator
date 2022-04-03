@@ -9,21 +9,21 @@ namespace ShapeCalculator
         public readonly double SideC;
 
         public readonly double[] Sides;
-        
+
         public Triangle(double sideA, double sideB, double sideC)
         {
             SideA = sideA;
             SideB = sideB;
             SideC = sideC;
-            Sides = new double[]{SideA, SideB, SideC};
+            Sides = new double[] { SideA, SideB, SideC };
             foreach (double side in Sides)
             {
                 if (side <= 0)
                     throw new ArgumentException("Side of a triangle cannot be 0 or less");
             }
-            if ((SideA + SideB > SideC) && 
-                (SideB + SideC > SideA) && 
-                (SideA + SideC > SideB))
+            if ((SideA + SideB < SideC) || 
+                (SideB + SideC < SideA) || 
+                (SideA + SideC < SideB))
                     throw new ArgumentException("Triangle can`t exist with such sides");
         }
         
