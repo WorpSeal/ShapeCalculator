@@ -7,9 +7,9 @@ Item can have many categories.
 Category can have many items in it.
 
 Query to get All pairs Item-Category(even if Item has no categories).
-```bsl
-select Items.name, itemCatwithCatNamed.name
-from Items
-left join (select * from Categories join ItemCategoriesLinks on idCategory = catId) itemCatwithCatNamed
-on itemId = idItem
+```sql
+SELECT Items.name, itemCatwithCatNamed.name
+FROM Items
+LEFT JOIN (SELECT * FROM Categories JOIN ItemCategoriesLinks ON idCategory = catId) itemCatWithCatNamed
+ON itemId = idItem
 ```
